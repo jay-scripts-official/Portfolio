@@ -3,215 +3,156 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sam's Portfolio</title>
-  <meta name="theme-color" content="#0b0f1a" />
+  <title>Sam | Developer</title>
+  <meta name="theme-color" content="#0d1117" />
   <link rel="stylesheet" href="./style.css" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="bg">
-    <div class="grain"></div>
-    <div class="glow g1"></div>
-    <div class="glow g2"></div>
-    <div class="glow g3"></div>
-  </div>
+  
+  <div class="noise-overlay"></div>
 
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="Home">
-      <span class="brandDot"></span>
-      <span class="brandText">Portfolio</span>
-    </a>
+    <div class="topbarInner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brandIcon">./</span>
+        <span class="brandText">Sam_Dev</span>
+      </a>
 
-    <nav class="nav">
-      <a class="navLink" href="#about">About</a>
-      <a class="navLink" href="#work">Past work</a>
-      <a class="navLink" href="#contact">Contact</a>
-    </nav>
+      <nav class="nav">
+        <a class="navLink" href="#about">About</a>
+        <a class="navLink" href="#work">Work</a>
+        <a class="navLink" href="#contact">Contact</a>
+      </nav>
 
-    <button class="cta" id="scrollCta" type="button">
-      <span>View work</span>
-      <span class="ctaIcon">→</span>
-    </button>
+      <button class="cta" id="scrollCta" type="button">
+        <span class="ctaText">My Work</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </button>
+    </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="heroInner">
-        <div class="kicker">
-          <span class="pill">Available for projects</span>
-          <span class="dot"></span>
-          <span class="muted">Fast • Clean • Modern</span>
+      <div class="heroContent">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>Available for commissions</span>
         </div>
 
         <h1 class="title">
-          <span class="titleLine">Sam</span>
-          <span class="titleLine titleGrad">Developer</span>
+          Building logic,<br>
+          <span class="text-highlight">Crafting systems.</span>
         </h1>
 
         <p class="subtitle">
-          I am a dedicated scripter, I am have been scripting for over 5 years. I have experience in all kinds of things, like systems, NPC dialogs and so on, contact me for more information.
+          I am a dedicated <strong>Lua & Web Developer</strong> with over 5 years of experience. I specialize in backend systems, complex game logic, and clean UI design.
         </p>
 
         <div class="heroActions">
           <a class="btn primary" href="#contact">
-            <span>Contact me</span>
-            <span class="btnIcon">↗</span>
+            Let's Talk
           </a>
-          <button class="btn ghost" id="copyEmail" type="button" data-copy="fap63739@gmail.com">
-            <span id="copyEmailText">Copy email</span>
-            <span class="btnIcon">⎘</span>
+          <button class="btn secondary" id="copyEmail" type="button" data-copy="fap63739@gmail.com">
+            <span id="copyEmailText">Copy Email</span>
+            <span class="btnIcon">📋</span>
           </button>
         </div>
       </div>
 
-      <div class="heroSide">
-        <div class="glassCard">
-          <div class="glassHeader">
-            <div class="avatar" aria-hidden="true"></div>
-            <div class="glassTitle">
-              <div class="name">Sam</div>
-              <div class="role">Developer, designer & scripter</div>
-            </div>
+      <div class="heroCard">
+        <div class="code-header">
+          <div class="dots">
+            <span></span><span></span><span></span>
           </div>
-          <div class="glassBody">
-            <div class="miniRow">
-              <span class="miniKey">Strengths</span>
-              <span class="miniVal">Scripting • Website development • Website designer</span>
-            </div>
-            <div class="miniRow">
-              <span class="miniKey">Tools</span>
-              <span class="miniVal">HTML • LUA • PY • JS</span>
-            </div>
-            <div class="miniRow">
-              <span class="miniVal">—</span>
-            </div>
-          </div>
-          <div class="glassFooter">
-            <button class="chipBtn" id="scrollAbout" type="button">About me</button>
-            <button class="chipBtn" id="scrollWork" type="button">Past work</button>
-            <button class="chipBtn" id="scrollContact" type="button">Contact</button>
-          </div>
+          <div class="filename">profile.lua</div>
         </div>
-
-        <div class="orbit" aria-hidden="true">
-          <div class="ring r1"></div>
-          <div class="ring r2"></div>
-          <div class="ring r3"></div>
-          <div class="spark s1"></div>
-          <div class="spark s2"></div>
-          <div class="spark s3"></div>
+        <div class="code-body">
+          <div class="code-row"><span class="c-purple">local</span> <span class="c-yellow">developer</span> = <span class="c-blue">{</span></div>
+          <div class="code-row indent"><span class="c-red">name</span> = <span class="c-green">"Sam"</span>,</div>
+          <div class="code-row indent"><span class="c-red">role</span> = <span class="c-green">"Scripter & Designer"</span>,</div>
+          <div class="code-row indent"><span class="c-red">stack</span> = <span class="c-blue">{</span><span class="c-green">"LUA"</span>, <span class="c-green">"JS"</span>, <span class="c-green">"HTML"</span><span class="c-blue">}</span>,</div>
+          <div class="code-row indent"><span class="c-red">experience</span> = <span class="c-orange">5</span> <span class="c-grey">-- years</span></div>
+          <div class="code-row"><span class="c-blue">}</span></div>
+          <div class="code-row"><br></div>
+          <div class="code-row"><span class="c-purple">print</span>(<span class="c-green">"Welcome to my portfolio."</span>)</div>
+          <div class="cursor">_</div>
         </div>
       </div>
     </section>
 
     <section class="section" id="about">
       <div class="sectionHead">
-        <h2 class="h2">About me</h2>
-        <p class="p">
-          24/7 website designer & developer, Consistent LUA scripter, 3 year experience with java script, HTML and python.
-        </p>
+        <h2 class="h2">About</h2>
       </div>
 
-      <div class="grid2">
-        <div class="panel">
-          <div class="panelTop">
-            <div class="badge">Experience</div>
-            <div class="panelTitle">What I do</div>
-          </div>
-          <div class="panelBody">
-            <ul class="bullets">
-              <li>Hey! I am Sam, I have been scripting, writing java scripts, teaching python and building websites for 3 - 5 years now.
-              I have past work, you can check that out, I also have experience working with big companies, projects and games. I am extremely skilled and experienced
-              and I also come with a good trait, I don't take much, I am not greedy. You can contact me in "Contact" category where I have left my discord username and email.</li>
-            </ul>
-          </div>
+      <div class="grid-layout">
+        <div class="card about-card">
+          <h3 class="card-title">Background</h3>
+          <p class="card-text">
+            I build robust digital infrastructure. Whether it's complex NPC dialogue systems, secure backend web logic, or Python automation, I focus on <strong>performance</strong> and <strong>readability</strong>. I don't just write code; I solve problems.
+          </p>
         </div>
 
-        <div class="panel">
-          <div class="panelTop">
-            <div class="badge">Skills</div>
-            <div class="panelTitle">Stack</div>
-          </div>
-          <div class="panelBody tags">
+        <div class="card skills-card">
+          <h3 class="card-title">Tech Stack</h3>
+          <div class="tag-container">
+            <span class="tag">Lua</span>
+            <span class="tag">Python</span>
             <span class="tag">JavaScript</span>
-            <span class="tag">HTML</span>
-            <span class="tag">LUA</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">Roblox API</span>
+            <span class="tag">Node.js</span>
           </div>
-          <div class="panelBottom">
         </div>
       </div>
     </section>
 
     <section class="section" id="work">
       <div class="sectionHead">
-        <h2 class="h2">Past work</h2>
+        <h2 class="h2">Selected Work</h2>
+        <a href="https://Sam-Official-website.github.io/Past-work/" target="_blank" class="view-all-link">View Full Archive →</a>
       </div>
 
-      <div class="workGrid" id="workGrid">
-        <a class="workCard" href="https://Sam-Official-website.github.io/Past-work/" target="_blank" rel="noreferrer">
-          <div class="workTop">
-            <div class="workIcon">◆</div>
-            <div class="workMeta">
-              <div class="workTitle">Simple systems</div>
-                <div class="workSub">One of my basic script systems</div>
+      <div class="work-grid">
+        <a class="project-card" href="https://Sam-Official-website.github.io/Past-work/" target="_blank">
+          <div class="project-image-wrap">
+            <img src="./assets/project1.png" alt="Simple Systems" class="project-img">
+          </div>
+          <div class="project-content">
+            <div class="project-top">
+              <h3 class="project-title">Simple Systems</h3>
+              <span class="project-type">Scripting</span>
             </div>
-          </div>
-          <div class="workBody">
-                 <div class="workPreview">
-               <img src="./assets/project1.png" alt="Project preview" class="workImg">
-              <div class="scan"></div>
-           </div>
-          </div>
-          <div class="workFoot">
-            <span class="workTag">Scripting</span>
-            <span class="workTag">Systems</span>
-            <span class="workArrow">↗</span>
+            <p class="project-desc">A modular interaction system optimized for low latency.</p>
           </div>
         </a>
 
-       <a class="workCard" href="https://Sam-Official-website.github.io/Past-work/" target="_blank" rel="noreferrer">
-          <div class="workTop">
-            <div class="workIcon">◇</div>
-            <div class="workMeta">
-              <div class="workTitle">BigSystems</div>
-              <div class="workSub">Short one-line description</div>
+        <a class="project-card" href="https://Sam-Official-website.github.io/Past-work/" target="_blank">
+          <div class="project-image-wrap">
+            <div class="placeholder-img"></div> </div>
+          <div class="project-content">
+            <div class="project-top">
+              <h3 class="project-title">BigSystems</h3>
+              <span class="project-type">Game Logic</span>
             </div>
-          </div>
-          <div class="workBody">
-            <div class="workPreview">
-              <div class="scan"></div>
-              <div class="previewText">Preview</div>
-            </div>
-          </div>
-          <div class="workFoot">
-            <span class="workTag">Scripts</span>
-            <span class="workTag">Game</span>
-            <span class="workTag">Logic</span>
-            <span class="workArrow">↗</span>
+            <p class="project-desc">Scalable framework for large map data handling.</p>
           </div>
         </a>
 
-        <a class="workCard" href="https://Sam-Official-website.github.io/Past-work/" target="_blank" rel="noreferrer">
-          <div class="workTop">
-            <div class="workIcon">⬢</div>
-            <div class="workMeta">
-              <div class="workTitle">Project Name</div>
-              <div class="workSub">Short one-line description</div>
-            </div>
+        <a class="project-card" href="https://Sam-Official-website.github.io/Past-work/" target="_blank">
+          <div class="project-image-wrap">
+            <div class="placeholder-img" style="background: #232830"></div>
           </div>
-          <div class="workBody">
-            <div class="workPreview">
-              <div class="scan"></div>
-              <div class="previewText">Preview</div>
+          <div class="project-content">
+            <div class="project-top">
+              <h3 class="project-title">Web Dashboard</h3>
+              <span class="project-type">Full Stack</span>
             </div>
-          </div>
-          <div class="workFoot">
-            <span class="workTag">Web</span>
-            <span class="workTag">Design</span>
-            <span class="workTag">Motion</span>
-            <span class="workArrow">↗</span>
+            <p class="project-desc">Admin panel for managing game statistics remotely.</p>
           </div>
         </a>
       </div>
@@ -219,64 +160,40 @@
 
     <section class="section" id="contact">
       <div class="sectionHead">
-        <h2 class="h2">Contact information</h2>
-        <p class="p">
-          Clicking will copy your info.
-        </p>
+        <h2 class="h2">Get in touch</h2>
       </div>
 
-      <div class="grid2">
-        <div class="panel contactPanel">
-          <div class="panelTop">
-            <div class="badge">Discord</div>
-            <div class="panelTitle">Tap to copy</div>
+      <div class="contact-grid">
+        <div class="card contact-card" id="copyDiscord" data-copy="mr.business01">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2763-3.68-.2763-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.0991.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.699.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z"/></svg>
           </div>
-
-          <button class="contactBtn" type="button" data-copy="mr.business01" id="copyDiscord">
-            <span class="contactLeft">
-              <span class="contactIcon">⌁</span>
-              <span class="contactText">
-                <span class="contactKey">Discord</span>
-                <span class="contactVal" id="discordVal">mr.business01</span>
-              </span>
-            </span>
-            <span class="contactRight" id="discordHint">Copy</span>
-          </button>
+          <div class="contact-info">
+            <span class="contact-label">Discord</span>
+            <span class="contact-value" id="discordVal">mr.business01</span>
+          </div>
+          <span class="copy-hint" id="discordHint">Click to copy</span>
         </div>
 
-        <div class="panel contactPanel">
-          <div class="panelTop">
-            <div class="badge">Email</div>
-            <div class="panelTitle">Tap to copy / open</div>
+        <div class="card contact-card" id="copyEmail2" data-copy="fap63739@gmail.com">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           </div>
-
-          <div class="contactRow">
-            <button class="contactBtn" type="button" data-copy="fap63739@gmail.com" id="copyEmail2">
-              <span class="contactLeft">
-                <span class="contactIcon">@</span>
-                <span class="contactText">
-                  <span class="contactKey">Email</span>
-                  <span class="contactVal" id="emailVal">fap63739@gmail.com</span>
-                </span>
-              </span>
-              <span class="contactRight" id="emailHint">Copy</span>
-            </button>
-
-            <a class="contactLink" id="mailtoLink" href="mailto:fap63739@gmail.com">Open</a>
+          <div class="contact-info">
+            <span class="contact-label">Email</span>
+            <span class="contact-value" id="emailVal">fap63739@gmail.com</span>
           </div>
+          <span class="copy-hint" id="emailHint">Click to copy</span>
         </div>
       </div>
-
-      <footer class="footer">
-        <div class="footerLine"></div>
-        <div class="footerText">© <span id="year"></span> Yoyo</div>
-      </footer>
     </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Sam | Built with purpose.</p>
+    </footer>
   </main>
 
-  <div class="toast" id="toast" aria-live="polite" aria-atomic="true">
-    <div class="toastInner" id="toastInner">Copied</div>
-  </div>
+  <div class="toast" id="toast">Copied to clipboard</div>
 
   <script src="./script.js"></script>
 </body>
