@@ -3,197 +3,185 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sam | Developer</title>
-  <meta name="theme-color" content="#0d1117" />
+  <title>Jay | Scripter</title>
   <link rel="stylesheet" href="./style.css" />
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  
-  <div class="noise-overlay"></div>
 
-  <header class="topbar">
-    <div class="topbarInner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brandIcon">./</span>
-        <span class="brandText">Sam_Dev</span>
-      </a>
+  <div class="grid-bg"></div>
 
-      <nav class="nav">
-        <a class="navLink" href="#about">About</a>
-        <a class="navLink" href="#work">Work</a>
-        <a class="navLink" href="#contact">Contact</a>
-      </nav>
+  <div class="layout">
+    
+    <nav class="navbar">
+      <div class="nav-left">
+        <span class="logo">Jay_Scripts</span>
+      </div>
+      <div class="nav-center">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-right">
+        <a href="https://jay-scripts-official.github.io/Past-work/" target="_blank" class="btn-sm">
+          <span>Archives</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
+    </nav>
 
-      <button class="cta" id="scrollCta" type="button">
-        <span class="ctaText">My Work</span>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-      </button>
-    </div>
-  </header>
-
-  <main id="top">
     <section class="hero">
-      <div class="heroContent">
-        <div class="status-pill">
-          <span class="status-dot"></span>
-          <span>Available for commissions</span>
+      <div class="hero-text">
+        <div class="status-badge">
+          <span class="dot"></span> Available for projects
         </div>
-
-        <h1 class="title">
-          Building logic,<br>
-          <span class="text-highlight">Crafting systems.</span>
+        <h1>
+          Building logic.<br>
+          <span class="highlight">Designing systems.</span>
         </h1>
-
-        <p class="subtitle">
-          I am a dedicated <strong>Lua & Web Developer</strong> with over 5 years of experience. I specialize in backend systems, complex game logic, and clean UI design.
+        <p class="sub">
+          I'm Jay. A developer focused on backend stability, Lua scripting, and clean web architecture. I don't just write code; I engineer solutions.
         </p>
-
-        <div class="heroActions">
-          <a class="btn primary" href="#contact">
-            Let's Talk
-          </a>
-          <button class="btn secondary" id="copyEmail" type="button" data-copy="fap63739@gmail.com">
-            <span id="copyEmailText">Copy Email</span>
-            <span class="btnIcon">📋</span>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Contact Me</a>
+          <button class="btn-secondary" id="copyEmail" data-copy="fap63739@gmail.com">
+            <span>Copy Email</span>
           </button>
         </div>
       </div>
 
-      <div class="heroCard">
-        <div class="code-header">
-          <div class="dots">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="filename">profile.lua</div>
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="circle red"></div>
+          <div class="circle yellow"></div>
+          <div class="circle green"></div>
+          <div class="terminal-title">profile.lua</div>
         </div>
-        <div class="code-body">
-          <div class="code-row"><span class="c-purple">local</span> <span class="c-yellow">developer</span> = <span class="c-blue">{</span></div>
-          <div class="code-row indent"><span class="c-red">name</span> = <span class="c-green">"Sam"</span>,</div>
-          <div class="code-row indent"><span class="c-red">role</span> = <span class="c-green">"Scripter & Designer"</span>,</div>
-          <div class="code-row indent"><span class="c-red">stack</span> = <span class="c-blue">{</span><span class="c-green">"LUA"</span>, <span class="c-green">"JS"</span>, <span class="c-green">"HTML"</span><span class="c-blue">}</span>,</div>
-          <div class="code-row indent"><span class="c-red">experience</span> = <span class="c-orange">5</span> <span class="c-grey">-- years</span></div>
-          <div class="code-row"><span class="c-blue">}</span></div>
-          <div class="code-row"><br></div>
-          <div class="code-row"><span class="c-purple">print</span>(<span class="c-green">"Welcome to my portfolio."</span>)</div>
-          <div class="cursor">_</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="sectionHead">
-        <h2 class="h2">About</h2>
-      </div>
-
-      <div class="grid-layout">
-        <div class="card about-card">
-          <h3 class="card-title">Background</h3>
-          <p class="card-text">
-            I build robust digital infrastructure. Whether it's complex NPC dialogue systems, secure backend web logic, or Python automation, I focus on <strong>performance</strong> and <strong>readability</strong>. I don't just write code; I solve problems.
-          </p>
-        </div>
-
-        <div class="card skills-card">
-          <h3 class="card-title">Tech Stack</h3>
-          <div class="tag-container">
-            <span class="tag">Lua</span>
-            <span class="tag">Python</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">HTML/CSS</span>
-            <span class="tag">Roblox API</span>
-            <span class="tag">Node.js</span>
-          </div>
+        <div class="terminal-body">
+          <div class="line"><span class="kwd">local</span> <span class="var">dev</span> = <span class="sym">{</span></div>
+          <div class="line indent"><span class="key">user</span> = <span class="str">"Jay"</span>,</div>
+          <div class="line indent"><span class="key">role</span> = <span class="str">"Full Stack Scripter"</span>,</div>
+          <div class="line indent"><span class="key">stack</span> = <span class="sym">{</span><span class="str">"Lua"</span>, <span class="str">"Python"</span>, <span class="str">"JS"</span><span class="sym">}</span>,</div>
+          <div class="line indent"><span class="key">status</span> = <span class="str">"Online"</span></div>
+          <div class="line"><span class="sym">}</span></div>
+          <div class="line"><br></div>
+          <div class="line"><span class="func">print</span>(<span class="str">"System Initialized..."</span>)</div>
+          <div class="line cursor">_</div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="work">
-      <div class="sectionHead">
-        <h2 class="h2">Selected Work</h2>
-        <a href="https://Sam-Official-website.github.io/Past-work/" target="_blank" class="view-all-link">View Full Archive →</a>
+    <section id="about" class="section">
+      <h2 class="section-title">About & Stack</h2>
+      <div class="bento-grid">
+        <div class="bento-box large">
+          <h3>Background</h3>
+          <p>I have spent the last 5 years strictly focused on game logic and web systems. My philosophy is simple: keep it modular, keep it fast, and keep it secure. I have worked with large-scale projects requiring complex data management.</p>
+        </div>
+        <div class="bento-box small">
+          <h3>Languages</h3>
+          <div class="tags">
+            <span>Lua</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+          </div>
+        </div>
+        <div class="bento-box small">
+          <h3>Tools</h3>
+          <div class="tags">
+            <span>VS Code</span>
+            <span>Roblox API</span>
+            <span>Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="header-row">
+        <h2 class="section-title">Selected Work</h2>
+        <a href="https://jay-scripts-official.github.io/Past-work/" target="_blank" class="link-arrow">View Archive ↗</a>
       </div>
 
-      <div class="work-grid">
-        <a class="project-card" href="https://Sam-Official-website.github.io/Past-work/" target="_blank">
-          <div class="project-image-wrap">
-            <img src="./assets/project1.png" alt="Simple Systems" class="project-img">
+      <div class="projects-grid">
+        <a href="https://jay-scripts-official.github.io/Past-work/" target="_blank" class="project-card">
+          <div class="card-image">
+            <img src="./assets/project1.png" alt="Simple Systems">
           </div>
-          <div class="project-content">
-            <div class="project-top">
-              <h3 class="project-title">Simple Systems</h3>
-              <span class="project-type">Scripting</span>
+          <div class="card-content">
+            <h3>Simple Systems</h3>
+            <p>Modular interaction system optimized for speed.</p>
+            <div class="card-tags">
+              <span>Scripting</span>
+              <span>Backend</span>
             </div>
-            <p class="project-desc">A modular interaction system optimized for low latency.</p>
           </div>
         </a>
 
-        <a class="project-card" href="https://Sam-Official-website.github.io/Past-work/" target="_blank">
-          <div class="project-image-wrap">
-            <div class="placeholder-img"></div> </div>
-          <div class="project-content">
-            <div class="project-top">
-              <h3 class="project-title">BigSystems</h3>
-              <span class="project-type">Game Logic</span>
+        <a href="https://jay-scripts-official.github.io/Past-work/" target="_blank" class="project-card">
+          <div class="card-image">
+            <div class="img-placeholder">
+              <span>Preview Loading...</span>
             </div>
-            <p class="project-desc">Scalable framework for large map data handling.</p>
+          </div>
+          <div class="card-content">
+            <h3>Grand Marshal UI</h3>
+            <p>Complex user interface state management.</p>
+            <div class="card-tags">
+              <span>UI/UX</span>
+              <span>Frontend</span>
+            </div>
           </div>
         </a>
 
-        <a class="project-card" href="https://Sam-Official-website.github.io/Past-work/" target="_blank">
-          <div class="project-image-wrap">
-            <div class="placeholder-img" style="background: #232830"></div>
-          </div>
-          <div class="project-content">
-            <div class="project-top">
-              <h3 class="project-title">Web Dashboard</h3>
-              <span class="project-type">Full Stack</span>
+        <a href="https://jay-scripts-official.github.io/Past-work/" target="_blank" class="project-card">
+          <div class="card-image">
+            <div class="img-placeholder dark">
+              <span>Video Content</span>
             </div>
-            <p class="project-desc">Admin panel for managing game statistics remotely.</p>
+          </div>
+          <div class="card-content">
+            <h3>Combat Systems</h3>
+            <p>High-frequency hit detection and replication.</p>
+            <div class="card-tags">
+              <span>Game Logic</span>
+              <span>Math</span>
+            </div>
           </div>
         </a>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="sectionHead">
-        <h2 class="h2">Get in touch</h2>
-      </div>
-
-      <div class="contact-grid">
-        <div class="card contact-card" id="copyDiscord" data-copy="mr.business01">
-          <div class="contact-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2763-3.68-.2763-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.0991.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.699.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z"/></svg>
+    <section id="contact" class="section">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-box">
+        <div class="contact-item" id="copyDiscord" data-copy="mr.business01">
+          <div class="icon">Discord</div>
+          <div class="details">
+            <span class="val">mr.business01</span>
+            <span class="hint">Click to copy</span>
           </div>
-          <div class="contact-info">
-            <span class="contact-label">Discord</span>
-            <span class="contact-value" id="discordVal">mr.business01</span>
-          </div>
-          <span class="copy-hint" id="discordHint">Click to copy</span>
         </div>
-
-        <div class="card contact-card" id="copyEmail2" data-copy="fap63739@gmail.com">
-          <div class="contact-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        
+        <div class="contact-item" id="copyEmail2" data-copy="fap63739@gmail.com">
+          <div class="icon">Email</div>
+          <div class="details">
+            <span class="val">fap63739@gmail.com</span>
+            <span class="hint">Click to copy</span>
           </div>
-          <div class="contact-info">
-            <span class="contact-label">Email</span>
-            <span class="contact-value" id="emailVal">fap63739@gmail.com</span>
-          </div>
-          <span class="copy-hint" id="emailHint">Click to copy</span>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> Sam | Built with purpose.</p>
+    <footer>
+      © <span id="year">2026</span> Jay | Engineered for performance.
     </footer>
-  </main>
 
-  <div class="toast" id="toast">Copied to clipboard</div>
+  </div>
+
+  <div id="toast">Copied to clipboard</div>
 
   <script src="./script.js"></script>
 </body>
